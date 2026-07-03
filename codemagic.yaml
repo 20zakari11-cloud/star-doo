@@ -1,0 +1,11 @@
+workflows:
+  android-build:
+    name: StarDo Build
+    environment:
+      vars:
+        PACKAGE_NAME: "com.stardo"
+    scripts:
+      - name: Build
+        script: ./gradlew assembleDebug
+    artifacts:
+      - app/build/outputs/**/*.apk
